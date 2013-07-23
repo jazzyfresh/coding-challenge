@@ -67,6 +67,14 @@
       </div>
     </div>
 
+
+    <!-- TODO: determine how we can arrange app such that we can load the
+         javascript files at the end, or if it's necessary to load them here -->
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
     <div class="top-buffer"></div>
     <div class="container">
       <%= yield %>
@@ -76,10 +84,6 @@
       </footer>
     </div> <!-- /container -->
 
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "application" %>
 
   </body>
 </html>
