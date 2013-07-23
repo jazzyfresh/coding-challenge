@@ -1,0 +1,29 @@
+<h1>Listing questions</h1>
+
+<br>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= question.text %></td>
+        <td><%= link_to 'Show', question_path(question) %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question_path(question),
+                        method: :delete, data: { confirm: 
+                          'Are you sure you want to delete this question?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to 'Create New Question', new_question_path, {:class => "btn btn-primary"} %>
+</p>

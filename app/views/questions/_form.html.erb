@@ -1,0 +1,28 @@
+<%= form_for :question, url: questions_path do |f| %>
+  <% if @question.errors.any? %>
+    <div id="errorExplanation" class="alert alert-error alert-block">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4>Sorry!</h4>
+      <%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:
+      <ul>
+        <% @question.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>  
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit :class => 'btn btn-primary' %>
+  </p>
+<% end %>

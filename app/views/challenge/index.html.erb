@@ -1,0 +1,25 @@
+<h1>The Challenge Begins</h1>
+
+<pre class="language-javascript">
+  <code>
+    if (Prism.languages.markup) {
+
+    // Tokenize all inline PHP blocks that are wrapped in <?php ?>
+    // This allows for easy PHP + markup highlighting
+    Prism.hooks.add('before-highlight', function(env) {
+      if (env.language !== 'php') {
+        return;
+      }
+
+      env.tokenStack = [];
+
+      env.code = env.code.replace(/(?:&lt;\?php|&lt;\?|<\?php|<\?)[\w\W]*?(?:\?&gt;|\?>)/ig, function(match) {
+        env.tokenStack.push(match);
+
+        return '{{{PHP' + env.tokenStack.length + '}}}';
+      });
+    });
+  </code>
+</pre>
+
+<textarea id="challenge-box" rows="3"></textarea>

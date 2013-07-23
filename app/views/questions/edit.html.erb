@@ -1,0 +1,34 @@
+<h1>Editing question</h1>
+ 
+<%= form_for :question, url: question_path(@question.id),
+method: :patch do |f| %>
+  <% if @question.errors.any? %>
+  <div id="errorExplanation">
+    <h4><%= pluralize(@question.errors.count, "error") %> prohibited
+      this question from being saved:</h4>
+    <ul>
+    <% @question.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit :class => 'btn btn-primary' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to('Back to questions', {controller: "questions"})  %>
+</p>
