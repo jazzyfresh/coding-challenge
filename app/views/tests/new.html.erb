@@ -5,10 +5,7 @@
 <% content_for :javascript do %>
   <script type="text/javascript">
     $(function () {
-      // TODO: Determine the right way to do OOP with coffeescript
-      /* NewQuestionInTest("#new-question-btn", "#question-form"); */
-      new NewQuestionInTest();
-      // initializeTestForm();
+      NewQuestionInTest("#new-question-btn", "#question-form");
     });
   </script>
 <% end %>
