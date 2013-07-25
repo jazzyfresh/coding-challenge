@@ -1,0 +1,49 @@
+= form_for(@test) do |f|
+
+  - if @test.errors.any?
+    #error_explanation.alert.alert-error.alert-block
+      %button.close{:type => 'button',  'data-dismiss' => 'alert'} &times;
+      %h4 Sorry!
+      %div
+        = pluralize @test.errors.count, "error"
+        prohibited this test from being saved:
+      %ul
+        - @test.errors.full_messages.each do |msg|
+          %li= msg
+
+  %div
+    = f.label :title
+    = f.text_field :title
+
+  %div
+    = f.label :overall_difficulty
+    = f.number_field :overall_difficulty
+
+  %div
+    = f.label :genre
+    = f.text_field :genre
+
+  %h3 Questions
+
+  %table#question-form.table.table-border.table-striped{ :style => 'display:none;' }
+    %thead
+      %tr
+        %th #
+        %th Title
+        %th Difficulty
+        %th Category
+        %th Text
+    %tbody
+      %tr
+        %td
+        %td
+        %td
+        %td
+        %td
+
+  %p#new-question-btn.btn Add question
+
+  %br
+  %br
+
+  %div= f.submit :class => 'btn btn-primary btn-large'

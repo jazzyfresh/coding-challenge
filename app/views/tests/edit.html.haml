@@ -1,0 +1,17 @@
+- content_for :title do
+  Edit page
+
+- content_for :javascript do
+  :javascript
+    $(function () {
+      NewQuestionInTest("#new-question-btn", "#question-form");
+    });
+
+%h1 Editing test
+
+= render 'form'
+
+%div
+  = link_to 'Show', @test
+  |
+  = link_to 'Back', tests_path
