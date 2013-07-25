@@ -6,6 +6,10 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+# Use Haml for views
+gem 'haml'
+gem 'haml-rails'
+
 # Use SCSS and twitter-bootstrap for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'twitter-bootstrap-rails'
