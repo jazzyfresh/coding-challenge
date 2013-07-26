@@ -1,26 +1,30 @@
-%h1 Listing tests
+= render 'layouts/header'
 
-%br
+.container
+  %h1 Listing tests
 
-%table.table.table-border.table-striped
-  %thead
-    %tr
-      %th Title
-      %th Overall difficulty
-      %th Genre
-      %th
-      %th
-      %th
+  %br
 
-  %tbody
-    - @tests.each do |test|
+  %table.table.table-border.table-striped
+    %thead
       %tr
-        %td= test.title
-        %td= test.overall_difficulty
-        %td= test.genre
-        %td= link_to 'Show', test
-        %td= link_to 'Edit', edit_test_path(test)
-        %td= link_to 'Destroy', test_path(test), method: :delete,
-          data: { confirm: 'Are you sure?' }
+        %th Title
+        %th Overall difficulty
+        %th Genre
+        %th
+        %th
+        %th
 
-%p= link_to 'Create New Test', new_test_path, { :class => 'btn btn-primary' }
+    %tbody
+      - @tests.each do |test|
+        %tr
+          %td= test.title
+          %td= test.overall_difficulty
+          %td= test.genre
+          %td= link_to 'Show', test
+          %td= link_to 'Edit', edit_test_path(test)
+          %td= link_to 'Destroy', test_path(test), method: :delete,
+            data: { confirm: 'Are you sure?' }
+
+  %p= link_to 'Create New Test', new_test_path, { :class => 'btn btn-primary' }
+  = render 'layouts/footer'

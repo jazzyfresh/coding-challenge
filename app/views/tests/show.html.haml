@@ -1,23 +1,26 @@
-%p#notice= notice
+= render 'layouts/header'
 
-%p
-  %strong
-    Title:
-    = @test.title
+.container
+  %p#notice= notice
 
+  %p
+    %strong
+      Title:
+      = @test.title
 
-%p
-  %strong
-    Overall difficulty:
-    = @test.overall_difficulty
+  %p
+    %strong
+      Overall difficulty:
+      = @test.overall_difficulty
 
+  %p
+    %strong
+      Genre:
+      = @test.genre
 
-%p
-  %strong
-    Genre:
-    = @test.genre
+  %div
+    = link_to 'Edit', edit_test_path(@test)
+    |
+    = link_to 'Back', tests_path
 
-%div
-  = link_to 'Edit', edit_test_path(@test)
-  |
-  = link_to 'Back', tests_path
+  = render 'layouts/footer'

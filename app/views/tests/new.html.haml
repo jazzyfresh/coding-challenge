@@ -7,8 +7,13 @@
       NewQuestionInTest("#new-question-btn", "#question-form");
     });
 
-%h1 New test
+= render 'layouts/header'
 
-= render 'form'
+.container
+  %h1 New test
 
-= link_to 'Back', tests_path
+  = render 'form'
+
+  = link_to 'Back', tests_path
+
+  = render 'layouts/footer'
