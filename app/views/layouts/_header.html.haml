@@ -1,0 +1,27 @@
+-# =============================================================================
+-# ======= Toolbar Header ======================================================
+-# =============================================================================
+
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{ 'data-target' => '.nav-collapse',
+        'data-toggle' => 'collapse' }
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{ :href => '/' } CodingChallenge
+      .container.nav-collapse
+        %ul.nav
+          %li= menu_item 'Home', root_path
+          %li= link_to 'Take the Challenge', challenge_path
+          %li.dropdown
+            %a.dropdown-toggle{ :href => '#', :role => 'button',
+              'data-toggle' => 'dropdown' }
+              Challenge Master
+              %b.caret
+            %ul.dropdown-menu
+              = menu_item 'View Tests', tests_path
+              = menu_item 'Create New Test', new_test_path
+
+.top-buffer
