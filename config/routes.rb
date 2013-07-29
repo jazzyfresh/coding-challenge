@@ -1,7 +1,6 @@
 CodingChallenge::Application.routes.draw do
-  get "challenge/index", as: :challenge
+  get "challenge_environment/index", as: :challenge_environment
   get "welcome/index"
-  get "welcome/special"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

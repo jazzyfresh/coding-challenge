@@ -4,13 +4,13 @@
   .hero-unit
     %h1 Welcome to the Coding Challenge
     %p Ready to take the test?
-    %p= link_to 'Begin challenge »', challenge_path,
+    %p= link_to 'Begin challenge »', challenge_environment_path,
       :class => 'btn btn-primary btn-large'
 
   .row
     .span6
       %h2 Are you a Challenge Master?
-      %p= link_to 'View tests »', tests_path,
+      %p= link_to 'View challenges »', tests_path,
         :class => 'btn'
 
   = render 'layouts/footer'
