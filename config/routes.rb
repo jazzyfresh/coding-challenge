@@ -17,7 +17,7 @@ CodingChallenge::Application.routes.draw do
 
   # Resources
   resources :questions
-  resources :tests
+  resources :challenges
 
   # Example resource route with options:
   #   resources :products do
