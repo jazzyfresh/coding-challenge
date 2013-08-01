@@ -6,21 +6,21 @@
   %p
     %strong
       Title:
-      = @test.title
+      = @challenge.title
 
   %p
     %strong
       Overall difficulty:
-      = @test.overall_difficulty
+      = @challenge.overall_difficulty
 
   %p
     %strong
       Genre:
-      = @test.genre
+      = @challenge.genre
 
   %div
-    = link_to 'Edit', edit_test_path(@test)
+    = link_to 'Edit', edit_challenge_path(@challenge)
     |
-    = link_to 'Back', tests_path
+    = link_to 'Back', challenges_path
 
   = render 'layouts/footer'

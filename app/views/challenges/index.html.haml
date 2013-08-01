@@ -1,7 +1,7 @@
 = render 'layouts/header'
 
 .container
-  %h1 Listing tests
+  %h1 Listing challenges
 
   %br
 
@@ -16,15 +16,15 @@
         %th
 
     %tbody
-      - @tests.each do |test|
+      - @challenges.each do |challenge|
         %tr
-          %td= test.title
-          %td= test.overall_difficulty
-          %td= test.genre
-          %td= link_to 'Show', test
-          %td= link_to 'Edit', edit_test_path(test)
-          %td= link_to 'Destroy', test_path(test), method: :delete,
+          %td= challenge.title
+          %td= challenge.overall_difficulty
+          %td= challenge.genre
+          %td= link_to 'Show', challenge
+          %td= link_to 'Edit', edit_challenge_path(challenge)
+          %td= link_to 'Destroy', challenge_path(challenge), method: :delete,
             data: { confirm: 'Are you sure?' }
 
-  %p= link_to 'Create New Test', new_test_path, { :class => 'btn btn-primary' }
+  %p= link_to 'Create New challenge', new_challenge_path, { :class => 'btn btn-primary' }
   = render 'layouts/footer'

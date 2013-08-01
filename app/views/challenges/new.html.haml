@@ -1,19 +1,19 @@
 - content_for :title do
-  New Test
+  New Challenge
 
 - content_for :javascript do
   :javascript
     $(function () {
-      NewQuestionInTest("#new-question-btn", "#question-form");
+      NewQuestionInChallenge("#new-question-btn", "#question-form");
     });
 
 = render 'layouts/header'
 
 .container
-  %h1 New test
+  %h1 New challenge
 
   = render 'form'
 
-  = link_to 'Back', tests_path
+  = link_to 'Back', challenges_path
 
   = render 'layouts/footer'
