@@ -34,7 +34,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Use Ace for syntax highlighting
-gem 'ace-rails'
+# gem 'ace-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

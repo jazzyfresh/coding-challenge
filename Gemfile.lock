@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ace-rails (0.0.2)
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
       mail (~> 2.5.3)
@@ -145,7 +144,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ace-rails
   coffee-rails (~> 4.0.0)
   haml
   haml-rails

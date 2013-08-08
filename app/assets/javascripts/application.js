@@ -15,6 +15,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-//= require ace/ace
 
 $('.dropdown-toggle').dropdown()
